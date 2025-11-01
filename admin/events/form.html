@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Event</title>
+  </head>
+
+  <body>
+    <form action="./processevents.php" method="POST">
+      <label for="name">Event name</label>
+      <input type="text" id="name" name="name" autocomplete="off" required />
+      <br />
+      <br />
+
+      <label for="description">Description</label> <br />
+      <textarea
+        id="description"
+        name="description"
+        autocomplete="off"
+        required
+      ></textarea>
+
+      <br />
+
+      <label for="date">Event Date</label>
+      <input type="date" id="date" required name="date" autocomplete="off" />
+      <br />
+      <br />
+
+      <br />
+
+      <button type="reset">Reset</button>
+      <button type="submit">Submit</button>
+    </form>
+
+    <a href="/ustawi/backend/"> <button>Back</button></a>
+  </body>
+</html>

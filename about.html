@@ -1,0 +1,110 @@
+<DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width initial-scale 1" />
+      <title>ABOUT US</title>
+      <link rel="stylesheet" href="all.css" />
+    </head>
+    <body>
+      <header>
+        <!--NAVIGATION BAR-->
+        <div class="navbar">
+          <div class="logo">
+            <a href="index.php"><i>Ustawi wa jamii</i></a>
+          </div>
+          <ul class="links">
+            <li><a href="index.php">HOME</a></li>
+            <li><a href="eventsList.html">EVENTS</a></li>
+            <li><a href="contact.html">CONTACT US</a></li>
+            <li><a href="about.html" class="chosen_tab">ABOUT US</a></li>
+            <li><a href="account.html">ACCOUNT</a></li>
+          </ul>
+          <a href="join.html" class="action_button">JOIN US</a>
+          <div class="toggle_button">
+            <i class="fa-solid fa-bars">More</i>
+          </div>
+        </div>
+        <!--DROPDOWN MENU WHEN SCREEN SIZE DECREASES-->
+        <div class="dropdown_menu">
+          <ul>
+            <li><a href="index.php">HOME</a></li>
+            <li><a href="eventsList.html">EVENTS</a></li>
+            <li><a href="contact.html">CONTACT US</a></li>
+            <li><a href="about.html" class="chosen_tab">ABOUT US</a></li>
+            <li><a href="account.html">ACCOUNT</a></li>
+            <li><a href="join.html" class="action_button">JOIN US</a></li>
+          </ul>
+        </div>
+      </header>
+      <section class="about">
+        <h1>ABOUT US</h1>
+        <p>
+          Welcome to Ustawi Wa Jamii, where compassion meets action.<br />Through
+          strategic partnerships, innovative programs, and unwavering
+          dedication, we strive to address pressing social issues and create
+          lasting change.
+        </p>
+        <p>
+          What sets us apart is our holistic approach to charity. We recognize
+          that systemic challenges require comprehensive solutions, which is why
+          we tackle issues from multiple angles. <br />Transparency and
+          accountability are core values that guide everything we do.<br />
+          We believe in being open and honest with our supporters, partners, and
+          beneficiaries. Thus ensuring every donation is used efficiently and
+          effectively, maximizing its impact on the ground.<br />We believe that
+          every person deserves access to basic necessities, opportunities for
+          growth, and a sense of dignity.
+        </p>
+        <p>Motto:<br />"Compassion in Action: Building Hope, Changing Lives"</p>
+        <div class="row">
+          <div class="about-col">
+            <h2>MISSION</h2>
+            <p>
+              To alleviate suffering, foster hope, and empower communities to
+              thrive.
+            </p>
+            <img src="pic 1.jpeg" width="200" height="200" />
+          </div>
+          <div class="about-col">
+            <h2>VISION</h2>
+            <p>
+              Empowering communities worldwide to thrive in dignity, equality,
+              creating a world where every individual can reach their full
+              potential
+            </p>
+            <img src="pic 2.jpeg" width="200" height="200" />
+          </div>
+          <div class="about-col">
+            <h2>TEAM</h2>
+            <p>
+              We are a dedicated team of individuals committed to making a
+              positive impact on the lives of those in need.
+            </p>
+            <img src="pic 3.jpeg" width="200" height="200" />
+          </div>
+        </div>
+        <footer class="footer">
+          <a href="/ustawi/linked%20files/index.php">Home</a>
+          <a href="/ustawi/linked%20files/eventsList.html">Events</a>
+          <a href="/ustawi/linked%20files/about.html">About</a>
+          <a href="/ustawi/linked%20files/contact.html">Contact us</a>
+        </footer>
+      </section>
+      <!--SCRIPT FOR ADDITIONAL MENU WHEN SCREEN SIZE DECREASES-->
+      <script>
+        const toggleBtn = document.querySelector(".toggle_button");
+        const toggleBtnIcon = document.querySelector(".toggle_button i");
+        const dropDownMenu = document.querySelector(".dropdown_menu");
+
+        toggleBtn.onclick = function () {
+          dropDownMenu.classList.toggle("open");
+          const isOpen = dropDownMenu.classList.contains("open");
+
+          toggleBtnIcon.classList = isOpen
+            ? "fa-solid fa-xmark"
+            : "fa-solid fa-bars";
+        };
+      </script>
+    </body>
+  </html>
+</DOCTYPE>

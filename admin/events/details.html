@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mock Payment</title>
+
+    <!-- 
+
+  ####  === PAYPAL CREDENTIALS ===
+EMAIL: sb-kldyc29646927@personal.example.com
+PASSWPRD: bG666O9?
+ -->
+
+    <script
+      src="https://www.paypal.com/sdk/js?client-id=AVmT34JVM4WctD4Dh-n1LhOSH57x1fb-q-OZn6sX0mhnozCMLynwxkZddiNwCx9BuoUX54lGcl9b6Atx&enable-funding=venmo&currency=USD"
+      data-sdk-integration-source="button-factory"
+    ></script>
+    <script type="text/javascript" src="paypal.js"></script>
+
+    <style>
+      .mainContent {
+        width: 340px;
+        margin: auto;
+      }
+
+      .mainContent #smart-button-container {
+        margin-top: 30px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="mainContent">
+      <p>
+        Your generosity knows no bounds! Thank you for making a meaningful
+        difference through your donation. Together, we're building a brighter
+        future for those in need. Every contribution, big or small, brings us
+        closer to our shared goal of creating positive change. Thank you for
+        being a beacon of hope in someone's life today.
+      </p>
+      <form action="./savepayment.php" method="POST" id="charity-payment-form">
+        <label for="amount">Enter any amount</label>
+        <input
+          type="number"
+          id="amount"
+          name="amount"
+          min="1"
+          autocomplete="off"
+          required
+        />
+
+        <!-- mock event details -->
+
+        <input
+          hidden
+          type="number"
+          id="payer_id"
+          name="payer_id"
+          value="2"
+          autocomplete="off"
+        />
+
+        <input
+          hidden
+          type="number"
+          id="event_id"
+          name="event_id"
+          value="6"
+          autocomplete="off"
+        />
+
+        <input
+          hidden
+          type="text"
+          id="transacion_id"
+          name="transacion_id"
+          autocomplete="off"
+        />
+
+        <br />
+
+        <!-- <button type="submit">Submit</button> -->
+      </form>
+
+      <a href="/ustawi/backend/"> <button>Back</button></a>
+
+      <div id="smart-button-container">
+        <div style="text-align: center">
+          <div id="paypal-button-container"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
