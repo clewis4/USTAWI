@@ -8,7 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = trim($_POST['password']);
 
     // Find user by email
-    $stmt = $con->prepare("SELECT id, name, password FROM users WHERE email = ?");
+    $stmt = $con->prepare("SELECT id, name, password, role FROM users WHERE email = ?");
     $stmt->bind_param("s", $email);
     $stmt->execute();
     $result = $stmt->get_result();
@@ -24,7 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             setcookie('username', $row['name'], time() + (86400 * 1), "/"); // 1 day
             // setcookie('user_role', $row['role'], time() + (86400 * 1), "/"); // 1 day
             // Store user role in cookie
-setcookie("user_role", $row['role'], time() + (86400 * 1), "/", "", false, true);
+            setcookie("user_role", $row['role'], time() + (86400 * 1), "/", "", false, true);
  // Store session variables
             $_SESSION['user_id'] = $row['id'];
             $_SESSION['username'] = $row['name'];
