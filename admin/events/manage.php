@@ -1,14 +1,9 @@
-<<<<<<< HEAD
 <?php
 require '../../backend/db.php';
 require '../../backend/auth.php';
 
 // Check if user is admin
 checkAdminRole();
-=======
-<?php 
-require '../../backend/db.php';
->>>>>>> 4ef692d6f7b5cb14d0f3519961169cce39406bb6
 
 $query = "SELECT * FROM events";
 
