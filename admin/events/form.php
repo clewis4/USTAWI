@@ -5,8 +5,8 @@ require '../../backend/auth.php';
 checkAdminRole();
 ?> -->
 <?php
-include "../..backend/db.php";
-include "../..adminonly.php";  
+include "../../backend/db.php";
+include "../../adminonly.php";  
 ?>
 
 <!DOCTYPE html>
