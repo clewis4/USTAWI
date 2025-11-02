@@ -63,9 +63,15 @@ $payments = mysqli_query($con,$query);
       </tbody>
     </table>
 
+<<<<<<< HEAD
     <!-- <a href="/USTAWI/admin/payments/manage.php"> <button>New Payment</button></a> -->
 
     <a href="/USTAWI/admin/payments"> <button>Back</button></a>
+=======
+    <!-- <a href="/ustawi/fullstack/admin/payments/manage.php"> <button>New Payment</button></a> -->
+
+    <a href="/ustawi/fullstack/admin/payments"> <button>Back</button></a>
+>>>>>>> 4ef692d6f7b5cb14d0f3519961169cce39406bb6
    
   </body>
 </html>

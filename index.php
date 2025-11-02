@@ -1,5 +1,4 @@
 <?php
-
 // Set default value in case cookie doesn't exist
 $username = "";
 
@@ -105,6 +104,9 @@ include_once './header.php';
       <a href="/ustawi/linked%20files/eventsList.php">Events</a>
       <a href="/ustawi/linked%20files/about.html">About</a>
       <a href="/ustawi/linked%20files/contact">Contact us</a>
+
+
+      <a href="/USTAWI/backend/users/logout.php">Logout</a>
     </footer>
 
     <!--

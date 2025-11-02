@@ -1,8 +1,11 @@
 <?php 
 
 include_once '../../backend/db.php';
+<<<<<<< HEAD
 include_once '../../backend/auth.php';
 checkAdminRole();
+=======
+>>>>>>> 4ef692d6f7b5cb14d0f3519961169cce39406bb6
 
 // Check if the form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {

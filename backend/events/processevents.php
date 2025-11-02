@@ -23,7 +23,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "Error: " . $sql . "<br>" . mysqli_error($con);
       }
 
-
       #disconnect
       mysqli_close($con);
 }
