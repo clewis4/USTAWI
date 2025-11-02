@@ -1,15 +1,34 @@
-<?php session_start(); 
+<?php
+session_start();
 
-
-
-// Set default value in case cookie doesn't exist
+// Get username
 $username = "";
 
+// Prefer session
+if (isset($_SESSION['username'])) {
+    $username = $_SESSION['username'];
+}
+// Fallback to cookie if session not set
+elseif (isset($_COOKIE['username'])) {
+    $username = $_COOKIE['username'];
+}
+
+// Get role for RBAC
+$role = $_SESSION['role'] ?? ($_COOKIE['user_role'] ?? '');
+?>
+
+
+
+
+<!-- <?php 
+session_start(); 
+// Set default value in case cookie doesn't exist
+$username = "";
 // Check if cookie exists
 if (isset($_COOKIE["username"])) {
   $username = $_COOKIE["username"];
 }
-?>
+?> -->
 
 
 <!DOCTYPE html>

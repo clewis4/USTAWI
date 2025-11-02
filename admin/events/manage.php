@@ -48,11 +48,7 @@ $events = mysqli_query($con,$query);
           <td><?php echo $event['description'] ?></td>
           <td><?php echo $event['date'] ?></td>
           <td>
-<<<<<<< HEAD
             <a href="/USTAWI/admin/events/update.php?id=<?php echo $event['id'] ?>"><button>Update</button></a>
-=======
-            <a href="/ustawi/fullstack/admin/events/update.php?id=<?php echo $event['id'] ?>"><button>Update</button></a>
->>>>>>> 4ef692d6f7b5cb14d0f3519961169cce39406bb6
           </td>
 
           <td>
@@ -69,14 +65,8 @@ $events = mysqli_query($con,$query);
       </tbody>
     </table>
 
-<<<<<<< HEAD
-    <a href="/USTAWI/admin/events/form.html"> <button>Add event</button></a>
+    <a href="/USTAWI/admin/events/form.php"> <button>Add event</button></a>
 
     <a href="/USTAWI/admin/"> <button>Back</button></a>
-=======
-    <a href="/ustawi/fullstack/admin/events/form.html"> <button>Add event</button></a>
-
-    <a href="/ustawi/fullstack/admin/"> <button>Back</button></a>
->>>>>>> 4ef692d6f7b5cb14d0f3519961169cce39406bb6
   </body>
 </html>
