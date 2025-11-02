@@ -1,0 +1,191 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    height: auto;
+    background-color: #e0bbe4;
+    
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+}
+a:hover{
+    color: #C3B1E1;
+}
+
+/*header*/
+header{
+    position: relative;
+    padding: 2px;
+    background-color: rgba(0, 0, 0, 0.534);
+}
+.navbar{
+    width: 100%;
+    height: 60px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.chosen_tab{
+    color: #ff06f3;
+}
+.navbar .logo a {
+    font-size: 25px;
+    font-weight: bold;
+}
+.navbar .links {
+    display: flex;
+    gap: 15px;
+}
+.navbar .toggle_button {
+    color: rgb(255, 255, 255);
+    font-size: 1.3rem;
+    cursor: pointer;
+    display: none;
+}
+.toggle_button:hover{
+    scale: 1.05;
+    color: #230e4488;
+    background-color: white;
+}
+.toggle_button{
+    background-color: #c3b1e188;
+    color: aliceblue;
+    padding: 0.3rem 0.8rem;
+    border-width: 50px;
+    outline: none;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: scale 0.2 ease
+
+}
+.action_button{
+    background-color: rgb(192, 3, 250);
+    color: aliceblue;
+    padding: 0.3rem 0.8rem;
+    border-width: 50px;
+    outline: none;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: scale 0.2 ease
+
+}
+.action_button:hover{
+    scale: 1.05;
+    color: black;
+}
+.action_button:active{
+    scale: 0.95;
+}
+/*DROPDOWN MENU WHEN SCREEN SIZE DECREASES*/
+.dropdown_menu{
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    height: 0;
+    width: 300px;
+    background: rgba(4, 0, 7, 0.486);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.dropdown_menu.open{
+    height: 240px;
+}
+.dropdown_menu li {
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.dropdown_menu .action_button{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+
+/*RESPONSIVE DESIGN*/
+@media(max-width: 992px){
+    .navbar .links,
+    .navbar .action_button{
+        display: none;
+    }
+
+    .navbar .toggle_button{
+        display: block;
+    }
+    .dropdown_menu{
+        display: block;
+
+    }
+}
+/*FOR DROPDOWN MENU*/
+@media(max-width: 576px){
+    .dropdown_menu{
+        left: 2rem;
+        width: unset;
+    }
+
+}
+/*BODY OF THE PAGE*/
+.information{
+    margin-top: 5%;
+    display: flex;
+    justify-content:center ;
+    flex-direction: column;
+}
+.logo_img, .abt_img, .join_img{
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    height:200px;
+    width:auto; 
+}
+.aim_img, .donation_img{
+    float: right;
+    margin-left: 20px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    height:200px;
+    width:auto; 
+}
+.abt_img{
+    height:200px;
+    width:600px; 
+}
+.words ,.words1 ,.words2 ,.words3 ,.words4{
+    font-size: 25px;
+    color: rgb(0, 0, 0);
+}
+.info{
+    flex-basis: 30%;
+    background: #fff3f3;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 1s;
+}
+.info:hover{
+    box-shadow: 0 0 20px 0px rgba(0,0,0,2);
+}

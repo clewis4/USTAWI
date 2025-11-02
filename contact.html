@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width initial-scale 1" />
+    <title>CONTACT US</title>
+    <link rel="stylesheet" href="all.css" />
+  </head>
+  <body>
+    <header>
+      <!--NAVIGATION BAR-->
+      <div class="navbar">
+        <div class="logo">
+          <a href="index.php"><i>Ustawi wa jamii</i></a>
+        </div>
+        <ul class="links">
+          <li><a href="index.php">HOME</a></li>
+          <li><a href="eventsList.php">EVENTS</a></li>
+          <li><a href="contact.html" class="chosen_tab">CONTACT US</a></li>
+          <li><a href="about.html">ABOUT US</a></li>
+          <li><a href="account.php">ACCOUNT</a></li>
+        </ul>
+        <a href="join.html" class="action_button">JOIN US</a>
+        <div class="toggle_button">
+          <i class="fa-solid fa-bars">More</i>
+        </div>
+      </div>
+      <!--DROPDOWN MENU WHEN SCREEN SIZE DECREASES-->
+      <div class="dropdown_menu">
+        <ul>
+          <li><a href="index.php">HOME</a></li>
+          <li><a href="eventsList.php">EVENTS</a></li>
+          <li><a href="contact.html" class="chosen_tab">CONTACT US</a></li>
+          <li><a href="about.html">ABOUT US</a></li>
+          <li><a href="account.php">ACCOUNT</a></li>
+          <li><a href="join.html" class="action_button">JOIN US</a></li>
+        </ul>
+      </div>
+    </header>
+    <h1>CONTACT US</h1>
+    <p>
+      Thank you for your interest in reaching out to us. <br />Your feedback,
+      inquiries, and collaboration proposals are invaluable to us as we strive
+      to improve and expand our efforts in making a positive impact on the
+      world. <br />Please feel free to contact us using any of the methods
+      below:.
+    </p>
+    <div class="contact-box">
+      <div class="contact-left">
+        <h2>Send Your Request</h2>
+        <form id="myForm">
+          <div class="input-row">
+            <div class="input-group">
+              <label>Name</label>
+              <input type="text" placeholder="Your Name" />
+            </div>
+            <div class="input-group">
+              <label>Phone</label>
+              <input type="text" placeholder="(+254) 123456789" />
+            </div>
+            <div class="input-group">
+              <label>Email</label>
+              <input type="email" placeholder="email@gmail.com" />
+            </div>
+            <div class="input-group">
+              <label>Subject</label>
+              <input type="text" placeholder="Product description" />
+            </div>
+            <label for="Message">Message</label>
+            <textarea rows="5" placeholder="Your Message"></textarea>
+            <button type="submit">SEND</button>
+          </div>
+        </form>
+        <!-- Confirmation message -->
+        <div id="confirmationMessage" class="hidden">
+          <p>Your request has been sent. Thank you!</p>
+        </div>
+        <script>
+          // Get reference to form and confirmation message
+          const form = document.getElementById("myForm");
+          const confirmationMessage = document.getElementById(
+            "confirmationMessage"
+          );
+
+          // Add event listener to form submission
+          form.addEventListener("submit", function (event) {
+            // Prevent default form submission
+            event.preventDefault();
+            // Display confirmation message
+            confirmationMessage.classList.remove("hidden");
+          });
+        </script>
+      </div>
+      <div class="contact-right">
+        <h2>Reach Us</h2>
+        <table>
+          <tr>
+            <td>Email</td>
+            <td>ustawiwajamiiorganization@gmail.com</td>
+          </tr>
+          <tr>
+            <td>Phone Number</td>
+            <td>+254 123456789</td>
+          </tr>
+          <tr>
+            <td>Address</td>
+            <td>
+              Karen Business Centre <br />
+              4th Floor<br />Langata Road
+            </td>
+          </tr>
+        </table>
+        <br />
+        <p>
+          Connect with us on social media platforms to stay updated on our
+          latest projects, events, and initiatives:
+        </p>
+        <br />
+        <p>
+          Facebook: @UstawiwaJamiiOrganiztion<br />X: @UstawiwaJamiiOrganiztion
+          <br />Instagram: @UstawiwaJamiiOrganiztion<br />LinkedIn:
+          @UstawiwaJamiiOrganiztion
+        </p>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <a href="/ustawi/linked%20files/index.php">Home</a>
+      <a href="/USTAWI/eventsList.php">Events</a>
+      <a href="/ustawi/linked%20files/about.html">About</a>
+      <a href="/ustawi/linked%20files/contact">Contact us</a>
+    </footer>
+
+    <!--SCRIPT FOR ADDITIONAL MENU WHEN SCREEN SIZE DECREASES-->
+    <script>
+      const toggleBtn = document.querySelector(".toggle_button");
+      const toggleBtnIcon = document.querySelector(".toggle_button i");
+      const dropDownMenu = document.querySelector(".dropdown_menu");
+
+      toggleBtn.onclick = function () {
+        dropDownMenu.classList.toggle("open");
+        const isOpen = dropDownMenu.classList.contains("open");
+
+        toggleBtnIcon.classList = isOpen
+          ? "fa-solid fa-xmark"
+          : "fa-solid fa-bars";
+      };
+    </script>
+  </body>
+</html>

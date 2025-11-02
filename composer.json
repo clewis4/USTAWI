@@ -1,0 +1,15 @@
+{
+    "name": "ustawi/project",
+    "description": "USTAWI Charity Project",
+    "authors": [
+        {
+            "name": "USTAWI Team"
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "*"
+    },
+    "require": {
+        "vlucas/phpdotenv": "*"
+    }
+}
