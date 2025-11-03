@@ -37,11 +37,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             header("Location: /USTAWI/index.php");
             exit;
         } else {
-            echo "<script>alert('Incorrect password!'); window.location.href='../../login.html';</script>";
+            echo "<script>alert('Incorrect password!'); window.location.href='/USTAWI/login.html';</script>";
             exit;
         }
     } else {
-        echo "<script>alert('User not found!'); window.location.href='../../login.html';</script>";
+        echo "<script>alert('User not found!'); window.location.href='/USTAWI/login.html';</script>";
         exit;
     }
 

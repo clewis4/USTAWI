@@ -14,12 +14,12 @@ $dbname = $_ENV['DB_NAME'] ?? 'ustawi';
 /*  Syntax for the connection string is -> Server, username, password, database name
 **  Using environment variables for security
 */
-$con = mysqli_connect($host, $user, $pass, $dbname);
+$con = mysqli_connect('localhost', 'root', '', 'ustawi');
 
-if(mysqli_connect_errno()) {
-    echo "Unable to connect to database";
-    exit();
+if (!$con) {
+    die("Connection failed: " . mysqli_connect_error());
 }
+// echo "Connected successfully!";
 
 ?>
 

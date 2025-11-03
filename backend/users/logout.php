@@ -1,9 +1,17 @@
 <?php
-session_start();     // Start the session to access session variables
-session_unset();     // Remove all session variables
-session_destroy();   // Destroy the session itself
+session_start();
 
-// Redirect to the login page
-header("Location: /USTAWI/index.php");
+// Remove all session variables
+session_unset();
+
+// Destroy the session
+session_destroy();
+
+// Optional: clear cookies if you set any
+setcookie('user_id', '', time() - 3600, '/');
+setcookie('username', '', time() - 3600, '/');
+
+// Redirect to login page
+header("Location: login.php");
 exit;
 ?>
