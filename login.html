@@ -4,6 +4,13 @@
     <meta charset="UTF-8" />
     <title>Ustawi wa jamii</title>
     <link rel="stylesheet" type="text/css" href="all.css" />
+    <script src="/USTAWI/recaptcha-bootstrap.js"></script>
+<style>
+  /* Ensure the reCAPTCHA widget has no unexpected borders/lines from global styles */
+  .g-recaptcha, .grecaptcha-badge { border: 0 !important; box-shadow: none !important; background: transparent !important; }
+  .g-recaptcha iframe { border: 0 !important; }
+  .g-recaptcha { display: inline-block; margin: 8px 0; }
+</style>
   </head>
   <style>
     h2 {
@@ -74,6 +81,12 @@
             />
           </div>
           <div class="button_group" id="login_button">
+<div class="captcha-container">
+    <div class="g-recaptcha" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"></div>
+</div>
+
+<br>
+
             <button type="submit">Login</button>
 
           </div>
@@ -85,12 +98,13 @@
             />
              <div class="signup_link">
             Don’t have an account?
-            <a href="/USTAWI/join.html">Sign up here</a>S
+            <a href="/USTAWI/join.html">Sign up here</a>
           </div>
           
         </form>
       </div>
     </div>
     <script src="login page.js"></script>
+
   </body>
 </html>

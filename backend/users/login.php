@@ -3,6 +3,27 @@ session_start();
 include_once '../db.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // CAPTCHA verification (enforced only if secret configured)
+    function captcha_is_valid($captcha_response) {
+    $secret = "6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe"; // Google's test secret key
+
+    $verify = file_get_contents(
+        "https://www.google.com/recaptcha/api/siteverify?secret=" 
+        . $secret 
+        . "&response=" 
+        . $captcha_response
+    );
+
+    $response = json_decode($verify);
+
+    return isset($response->success) && $response->success == true;
+}
+
+if (!captcha_is_valid($_POST['g-recaptcha-response'] ?? '')) {
+    echo "<script>alert('CAPTCHA verification failed. Please try again.');</script>";
+    exit();
+}
+
     // Clean input
     $email = strtolower(trim($_POST['email']));
     $password = trim($_POST['password']);

@@ -196,9 +196,9 @@ header {
 .login_form_container {
   position: relative;
   width: 400px;
-  height: 500px;
+  height: 700px;
   max-width: 400px;
-  max-height: 500px;
+  max-height: 700px;
   background: #ffdfd3;
   border-radius: 50px 5px;
   display: flex;
@@ -718,4 +718,7 @@ h2 {
 }
 .glowIcon {
   text-shadow: 0 0 10px #c3b1e1;
+}
+.captcha-container {
+    margin-bottom: 25px;  
 }

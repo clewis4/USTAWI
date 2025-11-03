@@ -6,6 +6,12 @@ include_once '../db.php';
 
 // Only accept POST
 if ($_SERVER["REQUEST_METHOD"] !== "POST") {
+if (!captcha_is_valid($_POST['g-recaptcha-response'] ?? '')) { 
+    echo "<script>alert('CAPTCHA verification failed.');</script>"; 
+    exit(); 
+}
+
+
     http_response_code(405);
     exit('Method not allowed');
 }

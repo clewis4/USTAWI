@@ -5,6 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JOIN US</title>
     <link rel="stylesheet" href="all.css" />
+    <script src="/USTAWI/recaptcha-bootstrap.js"></script>
+<!-- Also load Google's API directly to guarantee rendering on this page -->
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<style>
+  /* Ensure the reCAPTCHA widget has no unexpected borders/lines from global styles */
+  .g-recaptcha, .grecaptcha-badge { border: 0 !important; box-shadow: none !important; background: transparent !important; }
+  .g-recaptcha iframe { border: 0 !important; }
+  .g-recaptcha { display: inline-block; margin: 10px 0 10px 0; position: relative; z-index: 1; max-width: 304px;}
+  /* Extra spacing and isolation so nearby input underlines don't appear as lines in the widget */
+  .g-recaptcha { margin-top: 14px !important; margin-bottom: 8px !important; }
+  .g-recaptcha::before, .g-recaptcha::after { display: none !important; content: none !important; }
+  /* Ensure button and login link remain visible */
+      .button_group { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+      .createButton { margin-top: 10px !important; }
+</style>
   </head>
   <style>
     * {
@@ -88,13 +103,13 @@
         </ul>
       </div>
     </header>
-    <div class="centered-div">
-      <form action="./backend/users/processdata.php" method="post">
+    
+      
         <div class="centered-div">
           <div class="create_account_container">
             <div class="create_account">
               <h2>Create Account</h2>
-
+<form action="./backend/users/processdata.php" method="post">
               <div class="input_group">
                 <input
                   name="name"
@@ -150,25 +165,28 @@
                   id="submit_button"
                   style="background-color: #000; color: #fff"
                 /> -->
-                <button class="createButton">submit</button>
+                <div class="g-recaptcha" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"></div>
+                <button  class="createButton">submit</button>
                 <!-- </a> -->
               </div>
-
-              <br />
-              <div style="text-align: center">
+                </form>
+         </div>
+          </div>
+        </div>
+             
+    
+     <br />
+                <div style="text-align: center">
                 Already have an account ? &nbsp;
                 <a
                   href="/USTAWI/login.html"
                   class="login_link"
                   style="color: #000"
                 >
-                  Login</a
-                >
+                  Login</a>
+            
               </div>
-            </div>
-          </div>
-        </div>
-      </form>
+            
       <!-- <div class="login_form_container">
         <div class="login_form">
           <form id="myForm">
@@ -201,7 +219,7 @@
           </form>
         </div>
       </div> -->
-    </div>
+   
     <!--SCRIPT FOR ADDITIONAL MENU WHEN SCREEN SIZE DECREASES-->
     <script>
       const toggleBtn = document.querySelector(".toggle_button");
@@ -216,6 +234,7 @@
           ? "fa-solid fa-xmark"
           : "fa-solid fa-bars";
       };
+    
     </script>
   </body>
 </html>
